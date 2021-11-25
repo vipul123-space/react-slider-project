@@ -1,13 +1,125 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  background-color: #f1f5f8;
+}
+.title__box {
+  margin: 5rem 0 8rem 0;
+  text-align: center;
+}
+.title__box--heading {
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #324d67;
+}
+.title__box--heading span {
+  font-weight: 700;
+  color: #ba5d2c;
+  margin-right: 1.2rem;
+}
+main {
+  margin: 4rem auto 0;
+  width: 80vw;
+  height: 45rem;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.review__box {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.button__slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.person__box {
+  text-align: center;
+}
+.btn {
+  border: none;
+  padding: 0.2rem;
+  background-color: #617d98;
+  color: #fff;
+  border-radius: 5px;
+}
+.md {
+  font-size: 2.5rem;
+}
+.btn:hover {
+  background-color: #ba5d2c;
+  cursor: pointer;
+}
+.img__box {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.image {
+  height: 15rem;
+  width: 15rem;
+  object-fit: cover;
+  border: 4px solid #bcccdc;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 50%;
+}
+.person__info {
+  text-align: center;
+}
+.person__name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ba5d2c;
+  margin-bottom: 0.8rem;
+}
+.person__profession {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: #324d67;
+}
+.person__about {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0;
+  padding: 0 3rem;
+  color: #617d98;
+}
+.quote {
+  font-size: 5rem;
+  color: #ba5d2c;
+}
+section.activeslide {
+  opacity: 1;
+  transform: translateX(0);
+}
+section.lastslide {
+  transform: translateX(-100%);
+}
+section.nextslide {
+  transform: translateX(100%);
 }
